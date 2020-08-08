@@ -37,7 +37,6 @@ library
   ghc-options: -Wall -Werror
   build-depends:
       base >=4.7 && <5
-    , casing
     , data-default-class
     , elminator
     , http-types
