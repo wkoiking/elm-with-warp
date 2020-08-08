@@ -61,25 +61,6 @@ fromErr err = case err of
     Http.BadStatus n -> "BadStatus " ++ String.fromInt n
     Http.BadBody str -> "BadBody " ++ str
 
--- fetchTodos : Cmd Msg
--- fetchTodos =
---     Http.send FetchTodos API.getTodos
---
---
--- changeTodo : Todo -> Cmd Msg
--- changeTodo todo =
---     Http.send (always Reload) (API.putTodosById todo.todoId todo)
---
---
--- addTodo : Todo -> Cmd Msg
--- addTodo todo =
---     Http.send (always Reload) (API.postTodos todo)
---
---
--- removeTodo : Int -> Cmd Msg
--- removeTodo todoId =
---     Http.send (always Reload) (API.deleteTodosById todoId)
-
 post : TH.ElmToHaskellMessage -> Cmd Msg
 post msg =
     let toMsg : Result Http.Error TH.HaskellToElmMessage -> Msg
