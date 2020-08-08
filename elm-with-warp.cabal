@@ -50,7 +50,6 @@ library
 executable elm-with-warp-exe
   main-is: Main.hs
   other-modules:
-      GenerateElmType
       Paths_elm_with_warp
   hs-source-dirs:
       app
