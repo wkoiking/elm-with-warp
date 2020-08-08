@@ -1,0 +1,89 @@
+cabal-version: 1.12
+
+name:           elm-with-warp
+version:        0.1.0.0
+description:    Sample program for Elm with Haskell warp server backend
+homepage:       
+bug-reports:    
+author:         wkoiking
+maintainer:     example@example.com
+copyright:      2018 wkoiking
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      Lib
+      Type
+      CodeGen
+  other-modules:
+      Paths_elm_with_warp
+  hs-source-dirs:
+      src
+  default-extensions:
+      StrictData
+    , TupleSections
+    , LambdaCase
+    , MultiWayIf
+    , RecordWildCards
+    , DerivingStrategies
+    , DeriveGeneric
+    , DeriveAnyClass
+    , GeneralizedNewtypeDeriving
+    , BinaryLiterals
+  ghc-options: -Wall -Werror
+  build-depends:
+      base >=4.7 && <5
+    , casing
+    , data-default-class
+    , elminator
+    , http-types
+    , text
+    , wai
+    , aeson
+    , bytestring
+  default-language: Haskell2010
+
+executable elm-with-warp-exe
+  main-is: Main.hs
+  other-modules:
+      GenerateElmType
+      Paths_elm_with_warp
+  hs-source-dirs:
+      app
+  default-extensions:
+      StrictData
+    , TupleSections
+    , LambdaCase
+    , MultiWayIf
+    , RecordWildCards
+    , DerivingStrategies
+    , DeriveGeneric
+    , DeriveAnyClass
+    , GeneralizedNewtypeDeriving
+    , BinaryLiterals
+  ghc-options: -threaded -Wall -Werror
+  build-depends:
+      base >=4.7 && <5
+    , elm-with-warp
+    , warp
+    , wai
+    , http-types
+    , process
+  default-language: Haskell2010
+
+test-suite elm-with-warp-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_elm_with_warp
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -Wall -Werror
+  build-depends:
+      base >=4.7 && <5
+    , elm-with-warp
+  default-language: Haskell2010

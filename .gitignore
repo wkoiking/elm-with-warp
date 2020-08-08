@@ -1,0 +1,4 @@
+/.stack-work/
+index.html
+/elm-src/Generated/*.elm
+/static/*.js
