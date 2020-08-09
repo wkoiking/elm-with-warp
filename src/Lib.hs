@@ -18,7 +18,7 @@ app vCounter request respond = do
     bodyBstr <- requestBody request
     putStrLn "Contents in body:"
     if B.null bodyBstr
-        then putStrLn "No contents in body!!"
+        then putStrLn "No contents in body!!!"
         else B.putStrLn bodyBstr
     putStrLn ""
     if methodBstr == methodGet

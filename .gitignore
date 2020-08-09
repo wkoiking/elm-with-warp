@@ -1,5 +1,6 @@
 /.stack-work/
-index.html
 /elm-src/Generated/*.elm
 /static/*.js
 /elm-stuff/
+index.html
+ToDo.md

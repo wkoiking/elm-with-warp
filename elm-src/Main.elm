@@ -28,7 +28,7 @@ type Msg
 
 initialModel : Model
 initialModel =
-    { message = "No message"
+    { message = "No error message received"
     , counter = 0
     }
 
