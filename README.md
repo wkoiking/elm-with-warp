@@ -17,7 +17,7 @@ stack exec elm-with-warp-exe
 # Development with ghci
 
 Using reload command `:r` in ghci and `update :: IO ()` function defined 
-in `app/DevelMain.hs`, you can spare the build time for development.e.g.
+in `app/DevelMain.hs`, you can spare the build time for development. e.g.
 
 ~~~
 $ stack ghci
